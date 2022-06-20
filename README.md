@@ -18,7 +18,6 @@ I need to use four parameterization methods for the ordered points.
 
 Uniform parameterization is one of the easiest parameterization methods. According to the number of sampling points, parameter t is evenly distributed in the interval [0,1].
 
-![image-20220612135621176](E:\CG\Games\GAMES102\Study report\Week1\Study report for week 3.assets\image-20220612135621176.png)
 
 ```CPP
 void Update_Uniform_Parameterization(CanvasData* data) {
@@ -27,17 +26,14 @@ void Update_Uniform_Parameterization(CanvasData* data) {
 }
 ```
 
-![image-20220612140716559](E:\CG\Games\GAMES102\Study report\Week1\Study report for week 3.assets\image-20220612140716559.png)
-
 Because of the uniform sampling, there will be bumps between the closest points.
 
-<img src="E:\CG\Games\GAMES102\Study report\Week1\Study report for week 3.assets\image-20220612140840384.png" alt="image-20220612140840384" style="zoom:150%;" />
 
 ### Chordal parameterization
 
 Chordal parameterization determines the distribution of parameter **t** according to the spacing between adjacent sampling points.
 
-<img src="E:\CG\Games\GAMES102\Study report\Week1\Study report for week 3.assets\image-20220612135826156.png" alt="image-20220612135826156" style="zoom:80%;" />
+
 
 ```CPP
 void Update_Chordal_Parameterization(CanvasData* data) {
@@ -55,7 +51,6 @@ void Update_Chordal_Parameterization(CanvasData* data) {
 }
 ```
 
-![image-20220612140912008](E:\CG\Games\GAMES102\Study report\Week1\Study report for week 3.assets\image-20220612140912008.png)
 
 
 
@@ -80,19 +75,12 @@ void Update_Centripetal_Parameterization(CanvasData* data) {
 }
 ```
 
-![image-20220612141219252](E:\CG\Games\GAMES102\Study report\Week1\Study report for week 3.assets\image-20220612141219252.png)
 
 
 
 ### Foley parameterization
 
 Foley Parameterization uses the function, Nielson, to measure the distance between adjacent sample points.
-
-![image-20220612141509305](E:\CG\Games\GAMES102\Study report\Week1\Study report for week 3.assets\image-20220612141509305.png)
-
-![image-20220612141612740](E:\CG\Games\GAMES102\Study report\Week1\Study report for week 3.assets\image-20220612141612740.png)
-
-![image-20220612141712904](E:\CG\Games\GAMES102\Study report\Week1\Study report for week 3.assets\image-20220612141712904.png)
 
 ```CPP
 void Update_Foley_Parameterization(CanvasData* data) {
@@ -164,16 +152,7 @@ float _getAlpha(int i, const std::vector<Ubpa::pointf2>& points) {
 }
 ```
 
-![image-20220612141842796](E:\CG\Games\GAMES102\Study report\Week1\Study report for week 3.assets\image-20220612141842796.png)
-
-
-
-Compare the four parameterization results
-
-![image-20220612142241730](E:\CG\Games\GAMES102\Study report\Week1\Study report for week 3.assets\image-20220612142241730.png)
-
-![image-20220612142417408](E:\CG\Games\GAMES102\Study report\Week1\Study report for week 3.assets\image-20220612142417408.png)
 
 The curve was fitted using Lagrange polynomials in Assignment 3.
 
-code: [Max-shy/GAMES102-Assignment03](
+code: [Max-shy/GAMES102-Assignment03](https://github.com/Max-shy/GAMES102-Assignment03)
